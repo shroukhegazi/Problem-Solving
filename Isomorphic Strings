@@ -1,0 +1,21 @@
+class Solution(object):
+    def isIsomorphic(self, s, t):
+
+        dic = {}
+        if len(s)!= len(t):
+            return False
+        elif s=="" and t== "":
+            return True
+        else: 
+            for i in range (0, len(s)):
+                c1= s[i]
+                c2= t[i]
+                if c1 in dic:
+                    if dic[c1]!=c2:
+                        return False
+                else:
+                    if c2 in dic.values():
+                        return False
+                    dic[c1]=c2
+            return True                    
+        
