@@ -1,0 +1,11 @@
+class Solution(object):
+    def isSubsequence(self, s, t):
+        sub = ""
+        for i in range(0,len(t)):
+            if t[i] in s and t[i] == s[len(sub)]:
+                sub += t[i]
+        
+        if (sub == s):
+            return True
+        else:
+            return False
